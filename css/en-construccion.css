@@ -1,0 +1,132 @@
+:root {
+      --bg-dark: #000B21;
+      --primary: #0C6CC0;
+      --accent: #38BDF8;
+      --text: #F8FAFC;
+      --text-muted: #94A3B8;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: radial-gradient(circle at 50% 35%, #001A4E 0%, #000B21 65%, #000614 100%);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 20px;
+      position: relative;
+      overflow-x: hidden;
+      text-align: center;
+    }
+    .ambient-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(12, 108, 192, 0.28) 0%, rgba(56, 189, 248, 0.08) 50%, transparent 70%);
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      filter: blur(50px);
+      z-index: 0;
+    }
+    .content-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 680px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      height: 110px;
+      max-width: 280px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 28px;
+      filter: drop-shadow(0 6px 20px rgba(56, 189, 248, 0.25));
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+      box-shadow: none !important;
+    }
+    .status-text {
+      font-family: var(--font-display, 'Outfit', sans-serif);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #38BDF8;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .status-text::before,
+    .status-text::after {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: rgba(56, 189, 248, 0.5);
+    }
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 18px;
+      color: #FFFFFF;
+      letter-spacing: -0.5px;
+    }
+    p {
+      color: #94A3B8;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(2, 132, 199, 0.35);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+    }
+    .action-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(56, 189, 248, 0.5);
+      border-color: rgba(56, 189, 248, 0.8);
+      color: #FFFFFF;
+    }
+    .contact-hint {
+      margin-top: 32px;
+      font-size: 0.9rem;
+      color: #64748B;
+    }
+    .contact-hint a {
+      color: #38BDF8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-hint a:hover {
+      text-decoration: underline;
+    }
