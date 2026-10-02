@@ -11,10 +11,12 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Distribuidor oficial mechanic en Venezuela. Repuestos, herramientas e insumos químicos para microelectrónica al mayor.">
+  <meta name="description"
+    content="Distribuidor oficial mechanic en Venezuela. Repuestos, herramientas e insumos químicos para microelectrónica al mayor.">
   <link rel="canonical" href="https://liontechve.com/">
   <meta property="og:title" content="Lion Tech Venezuela — Mayoristas de Herramientas y Repuestos">
-  <meta property="og:description" content="Distribuidor oficial mechanic en Venezuela. Repuestos, herramientas e insumos químicos para microelectrónica al mayor.">
+  <meta property="og:description"
+    content="Distribuidor oficial mechanic en Venezuela. Repuestos, herramientas e insumos químicos para microelectrónica al mayor.">
   <meta property="og:image" content="https://liontechve.com/images/favicon-liontech.png">
   <meta property="og:url" content="https://liontechve.com/">
   <meta property="og:type" content="website">
@@ -26,10 +28,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="icon" type="image/png" href="../images/favicon-liontech.png">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=JetBrains+Mono:wght@500;700&display=swap"
     rel="stylesheet">
@@ -1016,12 +1014,12 @@
       margin-right: 0;
       margin-top: -15px;
       /* Suavizado de bordes izquierdo e inferior con doble máscara de degradado */
-      -webkit-mask-image: 
-        linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 2%, rgba(0,0,0,0.6) 6%, black 14%),
-        linear-gradient(to top, transparent 0%, rgba(0,0,0,0.2) 3%, rgba(0,0,0,0.8) 8%, black 16%);
-      mask-image: 
-        linear-gradient(to right, transparent 0%, rgba(0,0,0,0.1) 2%, rgba(0,0,0,0.6) 6%, black 14%),
-        linear-gradient(to top, transparent 0%, rgba(0,0,0,0.2) 3%, rgba(0,0,0,0.8) 8%, black 16%);
+      -webkit-mask-image:
+        linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 2%, rgba(0, 0, 0, 0.6) 6%, black 14%),
+        linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.8) 8%, black 16%);
+      mask-image:
+        linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.1) 2%, rgba(0, 0, 0, 0.6) 6%, black 14%),
+        linear-gradient(to top, transparent 0%, rgba(0, 0, 0, 0.2) 3%, rgba(0, 0, 0, 0.8) 8%, black 16%);
       -webkit-mask-composite: destination-in;
       mask-composite: intersect;
     }
@@ -3730,33 +3728,6 @@
       border: 0;
     }
 
-    .leaflet-container {
-      background: #000B21 !important;
-      font-family: var(--font-body) !important;
-    }
-
-    .leaflet-popup-content-wrapper {
-      background: rgba(0, 16, 52, 0.95) !important;
-      border: 1px solid rgba(56, 189, 248, 0.4) !important;
-      color: #FFFFFF !important;
-      border-radius: 12px !important;
-      backdrop-filter: blur(10px) !important;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
-    }
-
-    .leaflet-popup-tip {
-      background: rgba(0, 16, 52, 0.95) !important;
-    }
-
-    .leaflet-popup-content strong {
-      color: #38BDF8 !important;
-      font-size: 0.95rem;
-    }
-
-    .leaflet-popup-content small {
-      color: #CBD5E1 !important;
-      font-size: 0.78rem;
-    }
 
     .stores-map-hud {
       position: absolute;
@@ -5962,6 +5933,7 @@
     }
 
     .svc-partner-badge:hover {
+      background: #001034;
       transform: translateY(-2px);
       box-shadow: 0 8px 20px rgba(12, 108, 192, 0.4);
       border-color: rgba(56, 189, 248, 0.5);
@@ -5975,9 +5947,17 @@
       box-sizing: border-box;
     }
 
+    .svc-partner-badge--white .svc-partner-img {
+      width: 76px;
+      max-width: none;
+      height: 20px;
+      object-fit: contain;
+    }
+
     .svc-partner-badge--white:hover {
-      box-shadow: 0 8px 22px rgba(255, 255, 255, 0.25);
-      border-color: #38BDF8;
+      background: #FFFFFF;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+      border-color: #FFFFFF;
     }
 
     .svc-partner-img {
@@ -5986,6 +5966,17 @@
       width: auto;
       object-fit: contain;
       display: block;
+    }
+
+    .svc-partner-badge--logo {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .svc-partner-badge--logo .svc-partner-img {
+      height: 36px;
+      max-height: none;
+      max-width: none;
     }
 
     .svc-partner-img--round {
@@ -6294,12 +6285,15 @@
         gap: 20px;
         margin-top: 30px;
       }
+
       .team-hero-box__viewport {
         aspect-ratio: 16 / 10;
       }
+
       .team-hero-box__content h3 {
         font-size: 1.35rem;
       }
+
       .team-hero-box__content p {
         font-size: 0.9rem;
       }
@@ -6677,15 +6671,20 @@
         Selva tecnológica</div>
       <a href="en-construccion.html?sitio=care" class="sidenav__link" title="En construcción">
         <img src="../images/liontechcareve.jpg" class="sidenav__link-logo" alt="Lion Tech Care+">
-        <span>Lion Tech Care+ <small style="font-size:0.7rem; color:rgba(56,189,248,0.85); font-weight:600; margin-left:6px;">· En construcción</small></span>
+        <span>Lion Tech Care+ <small
+            style="font-size:0.7rem; color:rgba(56,189,248,0.85); font-weight:600; margin-left:6px;">· En
+            construcción</small></span>
       </a>
       <a href="en-construccion.html?sitio=hitreek" class="sidenav__link" title="En construcción">
         <img src="../images/hitreek.jpg" class="sidenav__link-logo" alt="Hi-Treek">
-        <span>Hi-Treek <small style="font-size:0.7rem; color:rgba(56,189,248,0.85); font-weight:600; margin-left:6px;">· En construcción</small></span>
+        <span>Hi-Treek <small style="font-size:0.7rem; color:rgba(56,189,248,0.85); font-weight:600; margin-left:6px;">·
+            En construcción</small></span>
       </a>
       <a href="en-construccion.html?sitio=mechanic" class="sidenav__link" title="En construcción">
         <img src="../images/mechanicve.jpg" class="sidenav__link-logo" alt="Mechanic Venezuela">
-        <span>Mechanic Venezuela <small style="font-size:0.7rem; color:rgba(56,189,248,0.85); font-weight:600; margin-left:6px;">· En construcción</small></span>
+        <span>Mechanic Venezuela <small
+            style="font-size:0.7rem; color:rgba(56,189,248,0.85); font-weight:600; margin-left:6px;">· En
+            construcción</small></span>
       </a>
     </nav>
 
@@ -6820,10 +6819,12 @@
         <div class="hero__visual" id="heroVisual">
           <div class="hero__visual-glow"></div>
           <!-- Logo Lion Tech directo arriba del equipo -->
-          <img src="../images/logo-sin-fondo.png" id="heroFloatingLogo" alt="Lion Tech Venezuela" class="hero__floating-logo">
+          <img src="../images/logo-sin-fondo.png" id="heroFloatingLogo" alt="Lion Tech Venezuela"
+            class="hero__floating-logo">
           <!-- Foto del equipo recortada limpia y apoyada abajo -->
           <div class="hero__team-wrap">
-            <img src="../images/hero-team-2026.webp" class="hero__team-img" alt="Equipo Lion Tech Venezuela" width="1920" height="1080">
+            <img src="../images/hero-team-2026.webp" class="hero__team-img" alt="Equipo Lion Tech Venezuela"
+              width="1920" height="1080">
           </div>
         </div>
       </div>
@@ -7214,8 +7215,8 @@
                 <img src="../images/logo-armi.jpg" alt="ARMI Delivery" class="svc-partner-img--round">
                 <span>ARMI</span>
               </div>
-              <div class="svc-partner-badge" title="Alianza Oficial con Yummy Delivery">
-                <img src="../images/logo-yummy.png" alt="Yummy Delivery" class="svc-partner-img" style="height:22px;">
+              <div class="svc-partner-badge svc-partner-badge--logo" title="Alianza Oficial con Yummy Rides">
+                <img src="../images/logo-yummy-rides-v2.png" alt="Yummy Rides" class="svc-partner-img">
               </div>
             </div>
           </div>
@@ -7246,10 +7247,10 @@
             <span class="svc-partners-label">Agencias Principales:</span>
             <div class="svc-partners-bar">
               <div class="svc-partner-badge svc-partner-badge--white" title="Envíos Oficiales por ZOOM">
-                <img src="../images/logo-zoom-oficial.jpg" alt="ZOOM Venezuela" class="svc-partner-img">
+                <img src="../images/logo-zoom-trim.jpg" alt="ZOOM Venezuela" class="svc-partner-img">
               </div>
               <div class="svc-partner-badge svc-partner-badge--white" title="Envíos Oficiales por MRW">
-                <img src="../images/logo-mrw-oficial.jpg" alt="MRW Venezuela" class="svc-partner-img">
+                <img src="../images/logo-mrw-oficial.jpg" alt="MRW Venezuela" class="svc-partner-img" style="object-fit:cover;">
               </div>
               <div class="svc-partner-badge svc-partner-badge--white" title="Envíos Oficiales por TEALCA">
                 <img src="../images/logo-tealca-oficial.jpg" alt="TEALCA Venezuela" class="svc-partner-img">
@@ -7312,7 +7313,8 @@
           style="--svc-accent: linear-gradient(90deg, #0C6CC0, #38BDF8); --svc-glow: radial-gradient(circle, rgba(56,189,248,0.2) 0%, transparent 70%);">
           <div class="svc-card__glow"></div>
           <div class="svc-thumb-wrap">
-            <img src="../images/svc-care.webp" alt="Servicio Técnico Especializado Lion Tech Care+" class="svc-thumb-img">
+            <img src="../images/svc-care.webp" alt="Servicio Técnico Especializado Lion Tech Care+"
+              class="svc-thumb-img">
           </div>
           <h3>Garantía y Respaldo Care+</h3>
           <p>Laboratorio especializado en micro-soldadura BGA, rescate de equipos mojados, cambio de pantallas OLED
@@ -7491,7 +7493,8 @@
             <div class="team-carousel__viewport">
               <div class="team-carousel__track" id="teamTrack">
                 <div class="team-carousel__slide">
-                  <img src="../images/LionTech/tienda/IMG_8987.jpg" alt="Atención Personalizada - Lion Tech" loading="lazy">
+                  <img src="../images/LionTech/tienda/IMG_8987.jpg" alt="Atención Personalizada - Lion Tech"
+                    loading="lazy">
                   <div class="team-carousel__caption">
                     <strong>Atención Personalizada</strong>
                     <span>Servicio y Asesoría con Amor</span>
@@ -7505,7 +7508,8 @@
                   </div>
                 </div>
                 <div class="team-carousel__slide">
-                  <img src="../images/LionTech/tienda/IMG_8991.jpg" alt="Variedad en Catálogo - Lion Tech" loading="lazy">
+                  <img src="../images/LionTech/tienda/IMG_8991.jpg" alt="Variedad en Catálogo - Lion Tech"
+                    loading="lazy">
                   <div class="team-carousel__caption">
                     <strong>Variedad &amp; Disponibilidad</strong>
                     <span>Los mejores repuestos y accesorios</span>
@@ -7547,10 +7551,12 @@
           <div class="team-hero-box__viewport">
             <div class="team-hero-box__track" id="teamHeroTrack">
               <div class="team-hero-box__slide">
-                <img src="../images/IMG_9090.webp" alt="Organización y exhibición de accesorios Lion Tech" loading="lazy">
+                <img src="../images/IMG_9090.webp" alt="Organización y exhibición de accesorios Lion Tech"
+                  loading="lazy">
               </div>
               <div class="team-hero-box__slide">
-                <img src="../images/IMG_9147.webp" alt="Gestión técnica y atención personalizada Lion Tech" loading="lazy">
+                <img src="../images/IMG_9147.webp" alt="Gestión técnica y atención personalizada Lion Tech"
+                  loading="lazy">
               </div>
               <div class="team-hero-box__slide">
                 <img src="../images/IMG_9149.webp" alt="Control de operaciones y calidad en tienda Lion Tech"
@@ -7564,7 +7570,8 @@
                   loading="lazy">
               </div>
               <div class="team-hero-box__slide">
-                <img src="../images/IMG_9184.webp" alt="Atención al cliente y asesoría técnica Lion Tech" loading="lazy">
+                <img src="../images/IMG_9184.webp" alt="Atención al cliente y asesoría técnica Lion Tech"
+                  loading="lazy">
               </div>
             </div>
           </div>
@@ -8205,9 +8212,12 @@
         <div class="stores-map-wrapper">
           <div class="stores-map-hud">
             <span class="location__live-dot" style="width: 6px; height: 6px;"></span>
-            <span id="storeCoordsHud">10.492188° N, -66.874063° W</span>
+            <span id="storeCoordsHud">10.492158° N, -66.874062° W</span>
           </div>
-          <div id="storesMapContainer" style="width: 100%; height: 100%; min-height: 380px; z-index: 1;"></div>
+          <iframe id="storesMapContainer" title="Mapa de la sede en Google Maps"
+            src="https://maps.google.com/maps?q=10.4921575,-66.8740618&z=17&hl=es&output=embed"
+            style="width: 100%; height: 100%; min-height: 380px; z-index: 1;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
         </div>
 
         <!-- Panel de información y acciones -->
@@ -8968,7 +8978,7 @@
 
       function framePath(slot, ext) {
         ext = ext || 'jpg';
-        return 'Frames/ezgif-frame-' + String(frameIds[slot] + 1).padStart(3, '0') + '.' + ext;
+        return '../Frames/ezgif-frame-' + String(frameIds[slot] + 1).padStart(3, '0') + '.' + ext;
       }
 
       /* ---------- 2. Carga progresiva ---------- */
@@ -9657,11 +9667,11 @@
         {
           fecha: 'Sede Matriz · Sabana Grande',
           titulo: 'Tienda Av. Casanova',
-          desc: 'Sede, oficinas directivas y centro mayorista de la manada Lion Tech. Asesoría directa con Alanis.',
-          direccion: 'Entre Blvd. de Sabana Grande y Av. Casanova, Callejón Borges, Edif. Permontsa Piso 2, Caracas.',
+          desc: 'Tienda de atención al mayor y detal.',
+          direccion: 'Entre Boulevard de Sabana Grande y Av. Casanova, Av. 2, Caracas 1050, Distrito Capital, Venezuela.',
           tel: '584129777736',
-          lat: 10.492188, lng: -66.874063,
-          mapsUrl: 'https://maps.app.goo.gl/5qfB6GLcrBaF3ETw8'
+          lat: 10.4921575, lng: -66.8740618,
+          mapsUrl: 'https://www.google.com/maps/place/Lion+Tech+Venezuela/@10.4921575,-66.8740618,17z/data=!4m6!3m5!1s0x8c2a5953a0434633:0x297bf6525f4232ce!8m2!3d10.4921575!4d-66.8740618!16s%2Fg%2F11tjw4q8xl'
         },
         {
           fecha: 'Boulevard de Sabana Grande · Caracas',
@@ -9728,7 +9738,7 @@
         }
       ];
 
-      /* Mapa vectorial nativo con Leaflet JS (100% compatible sin iframes) */
+      /* Mapa de sedes con Google Maps embebido */
       const storeMapsLink = (s) =>
         s.mapsUrl || `https://www.google.com/maps/search/?api=1&query=${s.lat}%2C${s.lng}`;
 
@@ -9746,8 +9756,8 @@
       const storeCopyBtn = document.getElementById('storeCopyBtn');
       const storePills = document.querySelectorAll('.store-nav-pill');
       let storeIndex = 0;
-      let leafletMap = null;
-      let currentMarker = null;
+      const storeEmbedUrl = (s) =>
+        `https://maps.google.com/maps?q=${s.lat},${s.lng}&z=17&hl=es&output=embed`;
 
       const STORE_SERVICES = [
         ['Sede Matriz', 'Oficinas Directivas', 'Atención Mayorista', 'Asesoría Especializada'],
@@ -9761,35 +9771,6 @@
       ];
 
       if (storesMapContainer) {
-        // Inicializar Leaflet Map
-        try {
-          if (typeof L !== 'undefined') {
-            leafletMap = L.map('storesMapContainer', {
-              center: [STORES[0].lat, STORES[0].lng],
-              zoom: 17,
-              zoomControl: true,
-              attributionControl: false
-            });
-
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              maxZoom: 20,
-              subdomains: ['a', 'b', 'c'],
-              attribution: '&copy; <a href=\"https://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors'
-            }).addTo(leafletMap);
-
-            const customIcon = L.divIcon({
-              className: 'custom-leaflet-pin',
-              html: `<div style="background:#0C6CC0;border:3px solid #FFFFFF;border-radius:50%;width:22px;height:22px;box-shadow:0 0 14px rgba(56,189,248,0.9);display:flex;align-items:center;justify-content:center;"><div style="width:7px;height:7px;background:#FFFFFF;border-radius:50%;"></div></div>`,
-              iconSize: [22, 22],
-              iconAnchor: [11, 11]
-            });
-
-            currentMarker = L.marker([STORES[0].lat, STORES[0].lng], { icon: customIcon }).addTo(leafletMap);
-          }
-        } catch (e) {
-          console.warn('Leaflet initialization fallback:', e);
-        }
-
         if (storesDots) {
           STORES.forEach((_, i) => {
             const dot = document.createElement('button');
@@ -9812,11 +9793,8 @@
           storeIndex = (i + STORES.length) % STORES.length;
           const s = STORES[storeIndex];
 
-          if (leafletMap && currentMarker) {
-            leafletMap.flyTo([s.lat, s.lng], 17, { duration: 1.2 });
-            currentMarker.setLatLng([s.lat, s.lng]);
-            currentMarker.bindPopup(`<strong>${s.titulo}</strong><br><small>${s.direccion}</small>`).openPopup();
-          }
+          const embedUrl = storeEmbedUrl(s);
+          if (storesMapContainer.getAttribute('src') !== embedUrl) storesMapContainer.src = embedUrl;
 
           if (storeBadge) storeBadge.textContent = s.fecha;
           if (storeTitle) storeTitle.textContent = s.titulo;
