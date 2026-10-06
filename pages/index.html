@@ -11,23 +11,24 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="description"
-    content="Distribuidor oficial mechanic en Venezuela. Repuestos, herramientas e insumos químicos para microelectrónica al mayor.">
-  <link rel="canonical" href="https://liontechve.com/">
-  <meta property="og:title" content="Lion Tech Venezuela — Mayoristas de Herramientas y Repuestos">
-  <meta property="og:description"
-    content="Distribuidor oficial mechanic en Venezuela. Repuestos, herramientas e insumos químicos para microelectrónica al mayor.">
-  <meta property="og:image" content="https://liontechve.com/images/favicon-liontech.png">
-  <meta property="og:url" content="https://liontechve.com/">
-  <meta property="og:type" content="website">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lion Tech Venezuela | Accesorios Telefónicos al Mayor y Detal</title>
+  <title>Lion Tech Venezuela | Ecosistema Tecnológico, Accesorios y Retail Oficial</title>
   <meta name="description"
-    content="Lion Tech Venezuela (@liontechve) - Accesorios para celular al mayor y detal en Sabana Grande, Caracas. Forros, cargadores, cables, power banks y audífonos.">
+    content="Lion Tech Venezuela (@liontechve) - Ecosistema integral de tecnología, smartphones, accesorios prémium y servicio técnico especializado con 8 guaridas a nivel nacional y envíos a toda Venezuela.">
+  <link rel="canonical" href="https://liontechve.com/">
+
+  <!-- Open Graph / Redes Sociales & WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://liontechve.com/">
+  <meta property="og:title" content="Lion Tech Venezuela — Ecosistema Tecnológico & Retail Oficial">
+  <meta property="og:description"
+    content="Smartphones, accesorios de alta gama, microelectrónica y servicio técnico oficial. 8 guaridas en Venezuela y envíos nacionales asegurados.">
+  <meta property="og:image" content="https://liontechve.com/images/hero-team-2026.webp">
+
+  <!-- Favicon y Tipografías -->
+  <link rel="icon" type="image/png" href="../images/favicon-liontech.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="icon" type="image/png" href="../images/favicon-liontech.png">
   <link
     href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,600&family=JetBrains+Mono:wght@500;700&display=swap"
     rel="stylesheet">
@@ -1338,11 +1339,13 @@
       background: radial-gradient(120% 100% at 50% 45%, #001848 0%, #000b21 55%, #00060f 100%);
     }
 
+    .gta-scene__video,
     .gta-scene__canvas {
       position: absolute;
       inset: 0;
       width: 100%;
       height: 100%;
+      object-fit: cover;
       display: block;
       pointer-events: none;
       z-index: 1;
@@ -6743,7 +6746,7 @@
             d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z">
           </path>
         </svg>
-        <span>+58 412-9777736</span>
+        <span>+58 414-8824107</span>
       </a>
       <div class="sidenav__contact-row sidenav__contact-row--muted">
         <span class="clock-animated">
@@ -8602,7 +8605,7 @@
           <h4>Contacto &amp; Horarios</h4>
           <ul>
             <li><a href="https://wa.me/584148824107" target="_blank" rel="noopener noreferrer">WhatsApp: +58
-                412-9777736</a></li>
+                414-8824107</a></li>
             <li><a href="mailto:contacto@liontechve.com">contacto@liontechve.com</a></li>
           </ul>
           <p style="margin-top: 14px; font-weight: 600; color: #38BDF8;">
@@ -8952,11 +8955,10 @@
     (function initIphoneScene() {
       const section = document.getElementById('framesSequence');
       const canvas = document.getElementById('framesScrollCanvas');
-      if (!section || !canvas) return;
+      const video = document.getElementById('framesScrollVideo');
+      if (!section) return;
 
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
-
+      const ctx = canvas ? canvas.getContext('2d') : null;
       const loader = document.getElementById('framesScrollLoader');
       const loaderText = section.querySelector('[data-loader-text]');
       const gradeA = section.querySelector('[data-grade="a"]');
@@ -8969,9 +8971,29 @@
 
       const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+      function hideLoader() {
+        if (!loader || loader.style.display === 'none') return;
+        loader.style.opacity = '0';
+        loader.style.pointerEvents = 'none';
+        setTimeout(() => { loader.style.display = 'none'; }, 300);
+      }
+
+      if (video) {
+        video.addEventListener('loadedmetadata', () => {
+          hideLoader();
+          paint(sceneProgress());
+        });
+        video.addEventListener('canplay', () => {
+          hideLoader();
+        });
+        if (video.readyState >= 1) {
+          hideLoader();
+        }
+      }
+
       /* ---------- 1. Selección de fotogramas según el dispositivo ---------- */
       const TOTAL_FRAMES = 150;
-      const stride = 1; // Cargar todos los 150 fotogramas para máxima fluidez y video completo
+      const stride = 1;
       const frameIds = [];
       for (let i = 0; i < TOTAL_FRAMES; i += stride) frameIds.push(i);
       const FRAMES = frameIds.length;
@@ -9001,22 +9023,9 @@
       let cursor = 0;
       let inflight = 0;
 
-      function hideLoader() {
-        if (revealed || !loader) return;
-        revealed = true;
-        loader.style.opacity = '0';
-        loader.style.pointerEvents = 'none';
-        setTimeout(() => { loader.style.display = 'none'; }, 300);
-      }
-
       // Permitir saltar el preload al hacer click en cualquier lugar o presionar cualquier tecla
-      window.addEventListener('click', () => {
-        if (!revealed) hideLoader();
-      }, { passive: true });
-
-      window.addEventListener('keydown', () => {
-        if (!revealed) hideLoader();
-      }, { passive: true });
+      window.addEventListener('click', hideLoader, { passive: true });
+      window.addEventListener('keydown', hideLoader, { passive: true });
 
       if (loader) {
         loader.style.cursor = 'pointer';
@@ -9148,7 +9157,6 @@
       }
 
       function paint(p) {
-        // Fotograma: Mapeo lineal completo de 0 a 149
         lastWanted = Math.min(FRAMES - 1, Math.floor(p * FRAMES));
         render(false);
 
