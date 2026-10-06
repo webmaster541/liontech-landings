@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Refuses the push when main would produce an incomplete landing release.
+# Enable once per clone: git config core.hooksPath .githooks
+set -euo pipefail
+while read -r local_ref local_sha remote_ref _; do
+  [[ "$remote_ref" == refs/heads/main ]] || continue
+  [[ "$local_sha" =~ ^0+$ ]] && continue
+  if [[ "$(git rev-parse HEAD)" != "$local_sha" ]]; then
+    echo "pre-push: push main from a checkout of the commit being pushed (HEAD != $local_sha)." >&2
+    exit 1
+  fi
+  PY=""
+  for c in python3 python py; do
+    if command -v "$c" >/dev/null && "$c" -c "import sys; sys.exit(sys.version_info < (3, 8))" 2>/dev/null; then PY=$c; break; fi
+  done
+  [[ -n "$PY" ]] || { echo "pre-push: Python 3.8+ not found." >&2; exit 1; }
+  "$PY" "$(git rev-parse --show-toplevel)/tools/deploy/build_release.py" --src . --check || {
+    echo "pre-push: main would publish an incomplete landing. Fix the files above and push again." >&2
+    exit 1
+  }
+done
+exit 0
