@@ -282,7 +282,7 @@
 
       function framePath(slot, ext) {
         ext = ext || 'jpg';
-        return 'Frames/ezgif-frame-' + String(frameIds[slot] + 1).padStart(3, '0') + '.' + ext;
+        return '../Frames/ezgif-frame-' + String(frameIds[slot] + 1).padStart(3, '0') + '.' + ext;
       }
 
       /* ---------- 2. Carga progresiva ---------- */
